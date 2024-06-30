@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList_V2</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="global-container">
+        <nav class="side-nav">
+            <div class="nav-logo">
+                <img src="" alt="">
+                <h1>Todo</h1>
+            </div>
+            <a href="" class="bloc-link active">
+                <img src="" alt="">
+                <span class="nav-links">Tasks</span>
+            </a>
+            <a href="" class="bloc-link">
+                <img src="" alt="">
+                <span class="nav-links">logs</span>
+            </a>
+        </nav>
+        <main class="main-content">
+            <button class="add-new-project-btn primary-btn toggle-modal" data-function="create-project">Ajouter projet</button>
+            <div class="table-tasks"></div>
+        </main>
+    </div>
+    <div class="modal">
+        <div class="modal-content">
+
+        </div>
+    </div>
+    <div class="confirmation-modal">
+        <div class="confirmation-modal-content">
+            <p class="confirmation-message"></p>
+            <button class="confirm-btn">OK</button>
+            <button class="cancel-btn">Annuler</button>
+        </div>
+    </div>
+    <div class="message-to-user">
+        <p class="message-content"></p>
+    </div>
+    <script type="module" src="assets/Js/script.js"></script>
+</body>
+</html>

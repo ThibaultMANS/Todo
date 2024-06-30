@@ -1,0 +1,302 @@
+/* Reset CSS */
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "roboto", sans-serif;
+}
+
+img {
+    width: 20px;
+}
+
+.global-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+}
+
+.primary-btn {
+    font-size: 18px;
+    background: none;
+    border: 1px solid #131313;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: box-shadow .3s ease-out;
+}
+
+.primary-btn:hover {
+    box-shadow: 0 0 10px rgba(19, 19, 19, 0.5);
+}
+
+.secondary-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Nav */
+
+.side-nav {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    border-right: 1px solid #131313;
+}
+
+.nav-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    cursor: pointer;
+    padding: 30px;
+}
+
+.nav-logo h1 {
+    margin-left: 10px;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.bloc-link {
+    display: flex;
+    font-weight: 300;
+    text-decoration: none;
+    padding: 20px 30px;
+}
+
+.bloc-link:hover {
+    background: #f8f8f8;
+}
+
+.bloc-link img {
+    width: 20px;
+}
+
+.bloc-link.active {
+    background-color: black;
+    color: white;
+}
+
+.bloc-link.active .nav-links {
+    font-weight: 500;
+}
+
+.nav-links {
+    color: inherit;
+    margin-left: 14px;
+}
+
+/* Main */
+
+.main-content {
+    position: relative;
+    grid-column: 2;
+    padding: 40px;
+}
+
+/* Table */
+
+.table-tasks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.table-item {
+    border: 1px solid #131313;
+    padding: 30px 30px 15px;
+    height: 350px;
+}
+.table-item h3 {
+    font-size: 24px;
+}
+.table-item  hr {
+    margin: 15px 0 25px;
+    width: 20%;
+}
+.table-item form{
+    height: 150px;
+    overflow-y: auto; 
+    overflow-x: hidden; 
+}
+.table-item .checkpoint{
+    margin: 3px 0;
+}
+.table-item .checkpoint span {
+    font-size: 18px;
+    padding-left: 5px;
+}
+.table-item button {
+    margin-top: 25px;
+}
+/* form scrollbar */
+.table-item form::-webkit-scrollbar {
+    width: 5px; 
+}
+
+.table-item form::-webkit-scrollbar-track {
+    background: transparent; 
+    border-radius: 10px; 
+}
+
+.table-item form::-webkit-scrollbar-thumb {
+    background: #111111; 
+    border-radius: 5px;
+}
+
+.table-item form::-webkit-scrollbar-thumb:hover {
+    background: #111111; 
+}
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: #333333d3;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    flex-grow: 1;
+    max-width: 600px;
+    position: relative;
+    padding: 25px 50px 40px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.modal-content h3 {
+    margin-bottom: 35px;
+    font-size: 32px;
+}
+
+.close-modal-btn {
+    padding: 4px 6px;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: none;
+    cursor: pointer;
+    color: #131313;
+}
+
+.input-title {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.project-steps-group .input-group:not(:first-child) {
+    margin-top: 5px;
+}
+
+.animated-input {
+    width: 95%;
+    padding: 8px 15px;
+    border: 1px solid #111;
+    outline: none;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+label {
+    font-size: 20px;
+    position: absolute;
+    color: #333;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%) translateX(20px);
+    transition: transform 0.3s ease-out;
+}
+
+.add-input-group-btn {
+    margin: 6px;
+}
+
+.create-project-btn {
+    margin-top: 25px;
+}
+
+/* Animation */
+
+.input-group:focus-within label,
+.input-group.filled-input label {
+    font-size: 16px;
+    transform: translateY(-45px) translateX(6px);
+}
+
+.input-group:focus-within .animated-input,
+.input-group.filled-input .animated-input {
+    border: 1px solid #111;
+}
+
+.active {
+    display: block;
+}
+
+/* Confirmation Modal */
+
+.confirmation-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.confirmation-modal.active {
+    display: flex;
+}
+
+.confirmation-modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.message-to-user {
+    display: none; /* Caché par défaut */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease-out; /* Animation de changement d'opacité */
+}
+
+.message-to-user.show {
+    display: block;
+    opacity: 1;
+}
